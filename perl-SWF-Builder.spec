@@ -5,30 +5,32 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	SWF
 %define	pnam	Builder
-Summary:	SWF::Builder - Create SWF movie.
+Summary:	SWF::Builder - create SWF movie
+Summary(pl):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
 Version:	0.07
 Release:	0.2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+BuildRequires:	perl-SWF-File
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-SWF-File
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreq	'perl(anything_fake_or_conditional)'
 
 %description
 SWF::Builder is a wrapper of SWF::File. It provides an easy way to
 create SWF6 movie.
 
+%description -l pl
+SWF::Builder to wrapper na SWF::File. Dostarcza prosty sposób na
+tworzenie filmów SWF6.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-# Don't use pipes here: they generally don't work. Apply a patch.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
@@ -51,7 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-# use macros:
-%{perl_vendorlib}/*
-%{perl_vendorarch}/*
+%{perl_vendorlib}/FIXME*
+%{perl_vendorarch}/FIXME*
 %{_mandir}/man3/*
