@@ -10,12 +10,21 @@ Summary(pl):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
 Version:	0.07
 Release:	0.2
+# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl-SWF-File
+Source0:	http://www.cpan.org/authors/id/Y/YS/YSAS/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	4d0857d07b52df777626019c9775ea27
+URL:		http://search.cpan.org/dist/SWF-Builder/
+%if %{with tests}
+BuildRequires:	perl-Compress-Zlib
+BuildRequires:	perl-Font-TTF >= 0.34
+BuildRequires:	perl-SWF-File >= 0.29
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Font-TTF >= 0.34
+Requires:	perl-SWF-File >= 0.29
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,9 +44,6 @@ tworzenie filmów SWF6.
 	INSTALLDIRS=vendor
 
 %{__make}
-# if module isn't noarch, use:
-# %{__make} \
-#	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
 
@@ -53,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/FIXME*
-%{perl_vendorarch}/FIXME*
-%{_mandir}/man3/*
+%attr(755,root,root) %{_bindir}/asc.plx
+%{perl_vendorlib}/SWF/Builder.pm
+%{perl_vendorlib}/SWF/Builder
+%{_mandir}/man1/asc.plx.1*
+%{_mandir}/man3/SWF::Builder*
