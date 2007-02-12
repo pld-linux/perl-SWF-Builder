@@ -6,7 +6,7 @@
 %define	pdir	SWF
 %define	pnam	Builder
 Summary:	SWF::Builder - create SWF movie
-Summary(pl):	SWF::Builder - tworzenie filmów SWF
+Summary(pl.UTF-8):   SWF::Builder - tworzenie filmÃ³w SWF
 Name:		perl-SWF-Builder
 Version:	0.14
 Release:	1
@@ -32,9 +32,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 SWF::Builder is a wrapper of SWF::File. It provides an easy way to
 create SWF6 movie.
 
-%description -l pl
-SWF::Builder to wrapper na SWF::File. Dostarcza prosty sposób na
-tworzenie filmów SWF6.
+%description -l pl.UTF-8
+SWF::Builder to wrapper na SWF::File. Dostarcza prosty sposÃ³b na
+tworzenie filmÃ³w SWF6.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
