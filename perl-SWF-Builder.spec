@@ -6,7 +6,7 @@
 %define	pdir	SWF
 %define	pnam	Builder
 Summary:	SWF::Builder - create SWF movie
-Summary(pl.UTF-8):   SWF::Builder - tworzenie filmów SWF
+Summary(pl.UTF-8):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
 Version:	0.14
 Release:	1
