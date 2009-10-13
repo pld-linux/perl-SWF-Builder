@@ -8,16 +8,16 @@
 Summary:	SWF::Builder - create SWF movie
 Summary(pl.UTF-8):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
-Version:	0.14
+Version:	0.16
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/Y/YS/YSAS/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	00353a3152da25d03ddea1cb666e7358
+# Source0-md5:	1e879b1b70a6d23bed64e0c960918944
 URL:		http://search.cpan.org/dist/SWF-Builder/
 %if %{with tests}
-BuildRequires:	perl-Compress-Zlib
+BuildRequires:	perl-IO-Compress
 BuildRequires:	perl-Font-TTF >= 0.34
 BuildRequires:	perl-SWF-File >= 0.29
 %endif
