@@ -9,7 +9,7 @@ Summary:	SWF::Builder - create SWF movie
 Summary(pl.UTF-8):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
 Version:	0.16
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -27,6 +27,8 @@ Requires:	perl-Font-TTF >= 0.34
 Requires:	perl-SWF-File >= 0.29
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	perl(SWF::Builder::ExElement::Color::AddColor)
 
 %description
 SWF::Builder is a wrapper of SWF::File. It provides an easy way to
