@@ -8,7 +8,7 @@ Summary:	SWF::Builder - create SWF movie
 Summary(pl.UTF-8):	SWF::Builder - tworzenie filmów SWF
 Name:		perl-SWF-Builder
 Version:	0.16
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
